@@ -111,17 +111,20 @@ Voice First → no-click interview possible
 Feedback Intelligence → includes structure, STAR method hints, timing confidence signals
 
 🚀 Getting Started
+
 📌 Requirements
-pip install -r requirements.txt
+
+    pip install -r requirements.txt
 
 🔒 Environment Setup (.env)
 
-Create a file named .env:
+  Create a file named .env:
 
-GEMINI_API_KEY=your_api_key_here
+    GEMINI_API_KEY=your_api_key_here
 
 ▶️ Run the Application
-streamlit run app.py
+
+    streamlit run app.py
 
 
 Use Google Chrome / Edge for microphone compatibility.
