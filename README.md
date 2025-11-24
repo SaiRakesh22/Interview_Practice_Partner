@@ -9,77 +9,87 @@ The AI Interview Practice Partner is a voice-enabled mock interview agent that c
 This project was developed as part of the Eightfold.ai – AI Agent Building Assignment, focusing on building a conversational agent that demonstrates:
 
 ✔ Natural, realistic dialogue
+
 ✔ Agentic decision-making (dynamic interviewing)
+
 ✔ Technical reasoning in design choices
+
 ✔ Voice-first interaction experience
 
 🧠 Key Features
+
 🎙 Voice-Enabled Interaction
 
-Questions can be spoken aloud using TTS (Text-to-Speech)
+  Questions can be spoken aloud using TTS (Text-to-Speech)
 
-Users can speak answers, automatically transcribed using speech-to-text
+  Users can speak answers, automatically transcribed using speech-to-text
 
-Hybrid mode: type + speech both supported
+  Hybrid mode: type + speech both supported
 
 👔 Role-Based Interviewing
 
-The interviewer adapts to roles such as:
+  The interviewer adapts to roles such as:
 
-Software Engineer
+    Software Engineer
 
-Data Analyst
+    Data Analyst
 
-Sales Associate
+    Sales Associate
 
-Product Manager
+    Product Manager
 
 🧩 Adaptive Questioning
 
-The agent adjusts interview depth based on:
+  The agent adjusts interview depth based on:
 
-Length of previous answers
+  Length of previous answers
 
-User confusion (short/unclear answers)
+  User confusion (short/unclear answers)
 
-Technical competence shown in responses
+  Technical competence shown in responses
 
 📊 Structured Post-Interview Feedback
 
-Includes:
+  Includes:
 
-Overall performance summary
+    Overall performance summary
 
-Scored evaluation (Communication, Technical Depth, Structure, Confidence)
+    Scored evaluation (Communication, Technical Depth, Structure, Confidence)
 
-Strengths and weaknesses
+    Strengths and weaknesses
 
-Personalized practice recommendations
+    Personalized practice recommendations
 
 💬 Handles Multiple Persona Styles
 
-The interviewer adapts even if the user is:
+  The interviewer adapts even if the user is:
 
-❓ Confused (doesn’t know answers)
+    ❓ Confused (doesn’t know answers)
 
-🚀 Efficient (short, direct answers)
+    🚀 Efficient (short, direct answers)
 
-🗣 Chatty (off-topic but talkative)
+    🗣 Chatty (off-topic but talkative)
 
-🤖 Edge cases (invalid/unrelated responses)
+    🤖 Edge cases (invalid/unrelated responses)
 
 🏗️ Architecture & Design Decisions
+
 🔧 Core Components
+
 Component	Responsibility
 app.py	UI, voice control, display logic, state management
 agent.py	Interactions with Gemini, conversation orchestration
 prompts.py	Behavior and personality definition for interviewer and coach
 .env	API key storage (not included in repo)
+
 🎤 Speech & Audio Processing
+
 Feature	Implementation
+
 Text-to-Speech	Browser SpeechSynthesis API
 Speech-to-Text	streamlit-mic-recorder + SpeechRecognition API
 Hybrid Input	Typed + spoken answers
+
 🤖 AI Model Strategy
 
 Uses Google Gemini (generateContent)
@@ -117,7 +127,9 @@ streamlit run app.py
 Use Google Chrome / Edge for microphone compatibility.
 
 🧪 Persona Testing Scenarios
+
 Persona	How the agent responds
+
 ❓ Confused user	Asks simpler follow-ups, offers clarification
 🚀 Efficient user	Asks deeper, more challenging questions
 🗣 Chatty user	Gently redirects to job-relevant responses
